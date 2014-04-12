@@ -6,6 +6,7 @@ from os.path import join, normpath
 
 from .base import *
 
+from os import environ
 
 ########## DEBUG CONFIGURATION
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#debug
