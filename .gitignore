@@ -38,3 +38,6 @@ tramp
 Thumbs.db
 Desktop.ini
 
+#env variables
+.env_var
+
