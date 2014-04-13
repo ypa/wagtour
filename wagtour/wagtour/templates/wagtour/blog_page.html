@@ -1,0 +1,8 @@
+{% load rich_text %}
+<html>
+<body>
+    <h1>{{ self.title }}</h1>
+        Date: {{ self.date }}
+        {{ self.body | richtext }}
+    </body>
+</html> 
