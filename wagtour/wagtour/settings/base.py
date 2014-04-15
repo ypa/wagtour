@@ -81,6 +81,7 @@ INSTALLED_APPS = (
     'wagtail.wagtailredirects',
 
     'wagtour',
+    'tour',
 )
 
 EMAIL_SUBJECT_PREFIX = '[wagtailtutorial] '
