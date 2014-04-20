@@ -17,13 +17,14 @@
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
 
         {# Local static assets such as css, images and javascrpt should be stored at [yourapp]/static/[yourapp]/... #}
-        {% compress css %}
-            {# Vendor stylesheets stored locally #}
-            <link rel="stylesheet" href="{% static "tour/css/vendor/jquery.bxslider.css" %}" />
 
-            {# Custom stylesheets #}
-            {# SCSS compilation relies on django compressor #}
-            <link rel="stylesheet" type="text/x-scss" href="{% static "tour/css/main.scss" %}" />
+        <link rel="stylesheet" href="{% static "tour/css/style.css" %}" />
+        <link rel="stylesheet" href="{% static "tour/css/style-responsive.css" %}" />
+
+
+        {% compress css %}
+
+
 
         {% endcompress %}
 
@@ -81,15 +82,18 @@
         </div>
 
         {# External javascript #}
-        <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
-        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 
         {% compress js %}
-            <script src="{% static "tour/js/vendor/jquery.bxslider.min.js" %}"></script>
-            <script src="{% static "tour/js/vendor/fluidvids.js" %}"></script>
+            <script src="{% static "tour/js/vendor/jquery.js" %}"></script>
+            <script src="{% static "tour/js/vendor/jquery.nivo.slider.pack.js" %}"></script>
+            <script src="{% static "tour/js/vendor/jquery.isotope.min.js" %}"></script>
+            <script src="{% static "tour/js/vendor/bootstrap-alert.js" %}"></script>
+            <script src="{% static "tour/js/vendor/formvalidation.js" %}"></script>
+            <script src="{% static "tour/js/vendor/smoothscroll.js" %}"></script>
+            <script src="{% static "tour/js/vendor/html5placeholder.jquery.js" %}"></script>
             {# Custom javascript #}
             {# Local static assets such as css, images and javascrpt should be stored at [yourapp]/static/[yourapp]/... #}
-            <script src="{% static "tour/js/main.js" %}"></script>
+
         {% endcompress %}
 
         {% block extra_js %}{% endblock %} {# Override this block in individual templates in order to add javascript on a template by template basis #}
